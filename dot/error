@@ -7,6 +7,9 @@ line 1:0 mismatched input 'STrIctGRAPH' expecting {STRICT, GRAPH, DIGRAPH}
 ../tests/erro/test_140191427970969618276259399025094278178:
 line 1:0 mismatched input 'sTRictdiGRApHT' expecting {STRICT, GRAPH, DIGRAPH}
 
+../tests/erro/test_142840091909690148006731689304126823826:
+line 13:74 token recognition error at: '-D'
+
 ../tests/erro/test_149876831066376921161088280911569448075:
 line 1:0 mismatched input 'StrICtGRaph' expecting {STRICT, GRAPH, DIGRAPH}
 
@@ -15,6 +18,9 @@ line 1:0 mismatched input 'sTriCtGRaPH52' expecting {STRICT, GRAPH, DIGRAPH}
 
 ../tests/erro/test_173067986888701277913529289957952441076:
 line 1:0 mismatched input 'STrictgraph' expecting {STRICT, GRAPH, DIGRAPH}
+
+../tests/erro/test_182938683011318128863466458898896638991:
+line 6:22 token recognition error at: '- '
 
 ../tests/erro/test_184196053761783231813224811362978856219:
 line 1:47 token recognition error at: '-O'
@@ -33,6 +39,9 @@ line 1:0 mismatched input 'stRICTGRAPH' expecting {STRICT, GRAPH, DIGRAPH}
 
 ../tests/erro/test_196549155520076625455381060025635136291:
 line 1:0 mismatched input 'sTRiCtGRAPH6372' expecting {STRICT, GRAPH, DIGRAPH}
+
+../tests/erro/test_197267420804211199004629583437911262798:
+line 1:15 token recognition error at: '- '
 
 ../tests/erro/test_228784146619476487451430006241443246810:
 line 1:0 mismatched input 'stRiCTdIgraPh' expecting {STRICT, GRAPH, DIGRAPH}
@@ -69,11 +78,29 @@ line 1:15 extraneous input '<>' expecting '{'
 ../tests/erro/test_295335814306893388482234857184670878681:
 line 1:0 mismatched input 'STRICtGRAPh' expecting {STRICT, GRAPH, DIGRAPH}
 
+../tests/erro/test_295484846566159582443392812154113238500:
+line 20:29 token recognition error at: '"  ;
+
+}  ->  e  : .6    --  { 
+
+}        subgrApH { 
+
+}  ;
+    { 
+    NoDe [ ]       Node [ x01  , 2  , -.94  = <𝋴>   ]   
+}  ;
+
+} '
+line 31:2 mismatched input '<EOF>' expecting {'{', '}', ';', '[', ':', GRAPH, NODE, EDGE, SUBGRAPH, NUMBER, STRING, ID, HTML_STRING}
+
 ../tests/erro/test_297516731349293608564543711918777611972:
 line 1:0 mismatched input 'stRICtdIgRAph' expecting {STRICT, GRAPH, DIGRAPH}
 
 ../tests/erro/test_30003922470429345733193863891923699215:
 line 1:44 token recognition error at: '>'
+
+../tests/erro/test_304295014408600171729696044582039883121:
+line 1:10 extraneous input '-9' expecting '{'
 
 ../tests/erro/test_304756334311935731772101502895523978966:
 line 1:0 mismatched input 'strICtDigRAPHaV7R' expecting {STRICT, GRAPH, DIGRAPH}
@@ -83,6 +110,9 @@ line 1:0 mismatched input 'STrICTdiGRAPh' expecting {STRICT, GRAPH, DIGRAPH}
 
 ../tests/erro/test_32803604826076320607258302060542439949:
 line 1:0 mismatched input 'sTrICTdigraPh' expecting {STRICT, GRAPH, DIGRAPH}
+
+../tests/erro/test_332707918100295852355799141584968652258:
+line 1:6 token recognition error at: '- '
 
 ../tests/erro/test_37546484204957481555837681186998817312:
 line 1:99 mismatched input '=' expecting {']', ',', NUMBER, STRING, ID, HTML_STRING}
