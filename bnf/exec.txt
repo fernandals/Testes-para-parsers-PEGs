@@ -1,0 +1,3 @@
+antlr4 bnf.g4
+javac bnf*.java
+grun bnf rulelist

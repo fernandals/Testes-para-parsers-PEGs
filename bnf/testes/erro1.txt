@@ -1,0 +1,5 @@
+<a> ::= abc
+<> ::= hmm
+<tt> := B | R
+<aa> ::= m
+<bb> ::= (mn | lj

@@ -1,0 +1,16 @@
+grammar Expr;		
+@parser::header{from random import sample}
+prog:	(attr | expr NEWLINE)* ;
+//prog:	(expr NEWLINE | ID '=' expr NEWLINE)* ;
+attr:{self.symtab = set()} vardef=ID '=' expr NEWLINE {self.symtab.add(str($vardef))};
+expr:	expr ('*'|'/') expr
+    |	expr ('+'|'-') expr
+    |	INT
+    |	{len(self.symtab) != 0}? ID {current.last_child =
+UnlexerRule(src=sample(self.symtab, 1)[0])}
+    |	'(' expr ')'
+    ;
+ID		: [a-z]+ ;
+NEWLINE : [\r\n]+ ;
+INT     : [0-9]+ ;
+

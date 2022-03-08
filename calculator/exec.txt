@@ -1,0 +1,3 @@
+antlr4 calculator.g4
+javac calculator*.java
+grun calculator equation -gui

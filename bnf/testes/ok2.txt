@@ -1,0 +1,7 @@
+<a1> ::= teste
+<a2> ::= <a1>
+<a3> ::= um [ dois | tres ]
+<a4> ::= teste { um }
+<a5> ::= b1 | b2 | b3 | b ( x | y | z )
+<a a> ::= k1 { ty | ti }
+<aa> ::=
