@@ -26,8 +26,10 @@ do
     then
         files=$((files+1))
 
-        test="$(java org.antlr.v4.gui.TestRig $1 $2 $filename 2>&1 >>../error)" 
-    
+        #test="$(java org.antlr.v4.gui.TestRig $1 $2 $filename 2>&1 >>../error)" 
+   
+        test="$(grun $1 $2 $filename 2>&1 >>../error)"
+
         if [ "$test" \> 0 ]
         then
             echo -e "$filename:\n$test\n" >>../error
