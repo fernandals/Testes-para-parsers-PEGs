@@ -49,19 +49,34 @@ def dot_space_transformer(node):
     return node
 
 def abnf_space_transformer(node):
+    
     for child in node.children:
-        abnf_space_transformer(child)
+        simple_space_transformer(child)
 
     if isinstance(node, UnparserRule):
         new_children = []
         for child in node.children:
-            if child.name == "rule_":
-                new_children.extend([child, UnlexerRule(src='\n')])
-            elif child.name == "concatenation":
-                new_children.extend([UnlexerRule(src=' '), child, UnlexerRule(src=' ')])
-            #elif child.parent.name == "rule_":
-            else:
-                new_children.extend([child])
+        
+            space = 0
+            for e in child.children:
+                space+=1
+                if str(e) == '=':
+                    break 
+            print("number of spaces = ",  space)
+
+            line = str(child).split('/')
+            cont = 0
+            for l in line:
+                if cont != 0:
+                    new_children.extend([' '*space])
+
+                if cont == len(line)-1:
+                    new_children.extend([l, UnlexerRule(src='\n')])
+                else: 
+                    new_children.extend([l, UnlexerRule(src='/'), UnlexerRule(src='\n')])
+                cont+=1
+
         node.children = new_children
 
     return node
+
